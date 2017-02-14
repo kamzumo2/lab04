@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        
+        .row.content {
+            height: 1500px
+        }
+        /* Set gray background color and 100% height */
+        
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+        /* Set black background color, white text and some padding */
+        
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-2 sidenav">
+                <h4>Kamzumo</h4>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#section1">Home</a></li>
+                    <li>
+                        <a href="#section2"></a>
+                    </li>
+
+                </ul><br>
+
+            </div>
+
+            <div class="col-sm-10">
+                <h4><small>RECENT POSTS</small></h4>
+                <hr>
+                <h2>การใช้งาน Grid ใน Bootstrap</h2>
+                <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5>
+                <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
+                <p>ปกติแล้ว grid system ที่ Bootstrap ให้มาจะเป็นแบบ 12 คอลัมน์ ซึ่งจะใช้ร่วมกับ container ที่เราเพิ่งสร้างขึ้นมานั่นเอง โดยแต่ละคอลัมน์จะมีความกว้างเท่ากันคือ 60px และจะอยู่ห่างกัน 20px จะได้ว่า (60*12) + (20*11) = 940 หรือความกว้างของ container
+                    เรานั่นเอง การจะสร้าง layouts ด้วย Bootstrap ให้เราสร้าง html element ที่มี class “row” ขึ้นมาก่อน ทีนี้เราจะสามารถสร้างแต่ละคอลัมน์ขึ้นมาได้ด้วยการใส่ html element ที่มี class “span*” เข้าไปข้างใน โดย * ที่อยู่ข้างหลัง span นั้นจะเป็นตัวเลขที่จะระบุว่าเราต้องการให้คอลัมน์นี้
+                    “กาง” แค่ไหน สมมติว่าเราจะสร้าง layouts แบบ 12 คอลัมน์ ให้เราใส่โค้ดด้านล่างนี้เข้าไปที่ container ของเรา</p>
+                <br><br>
+                <h4> Js01.html </h4>
+                <br>
+                <img src="Capture.PNG1.PNG" />
+                <br> <br> พิมพ์ข้อความ Last updated on ต่อด้วย วันที่ และเวลาอัตเดทไฟล์ล่าสุด <br> <br>
+
+
+                <h4> Js02.html </h4>
+                <br>
+                <img src="Capture.PNG2.PNG" />
+                <br> <br> ปริ้น Factorial ตั้งแต่ เลข1-9 <br><br>
+
+                <h4> Js03.html </h4>
+                <br>
+                <img src="Capture.PNG3.PNG" />
+                <br> <br> เป็นการสร้างปุ่ม ชื่อ Click me และเมื่อกดปุ่ม Click me จะเรียกฟังก์ชั่น alert ทำให้แสดงกล่องตอบโต้ มีข้อความแสดงว่า "You click me" <br><br>
+
+                <h4> Js04.html </h4>
+                <br>
+                <img src="Capture.PNG4.PNG" />
+                <br> <br> บรรทัด 6 : ประกาศฟังก์ชั่นชื่อ outputData() <br>บรรทัด 7 : ตัวแปร d เก็บค่าวันที่ และเวลา <br>บรรทัด 8 : พิมพ์ข้อความ d.toLocaleString() คือการเรียกวันที่ และเวลา ปัจจุบันของเครื่องคอมพิวเตอร์<br> บรรทัด 14 : เรียกใช้ฟังก์ชั่น
+                outputData() จะพิมพ์วันที่ และเวลาปัจจุบันของเครื่องคอมพิวเตอร์ออกมา <br> <br>
+
+                <h4> Js05.html </h4>
+                <br>
+                <img src="Capture.PNG5.PNG" />
+                <br> <br> บรรทัด 6 : ประกาศฟังก์ชั่นชื่อ alertUser()
+                <br> <br> บรรทัด 7 : ฟังก์ชั่น alert เก็บข้อความ "An alert box contains an exclamation mark"
+                <br> <br> บรรทัด 10 : ประกาศฟังก์ชั่นชื่อ confirmUser()
+                <br> <br> บรรทัด 11 : ตัวแปร msg เก็บข้อความ "please confirm that you want" และ "to test another button?"
+                <br> <br> บรรทัด 12 : ตวรจสอบการกดปุ่มต่อตัวแปร msg
+                <br> <br> บรรทัด 13 : ถ้ากดปุ่ม Ok จะขึ้นหน้าใหม่แสดงข้อความ "You selected OK"
+                <br> <br> บรรทัด 15 : ถ้ากดปุ่ม Cancel จะขึ้นหน้าใหม่แสดงข้อความ "You selected Cancel"
+                <br> <br> บรรทัด 18 : ประกาศฟังก์ชั่นชื่อ promptUser()
+                <br> <br>บรรทัด 19 : ตัวแปร namel เก็บฟังก์ชั่น prompt เก็บข้อความ "What is your name?" และ " " ---> (ค่า String ว่าง)
+                <br> <br> บรรทัด 20 : พิมพ์ข้อความ "welcome to this page" ใน h2 และต่อด้วยตัวแปร namel
+                <br> <br> บรรทัด 27 : เป็นการสร้างปุ่ม ชื่อ Click here to test alert() และเมื่อกดปุ่ม Click here to test alert() จะเรียกฟังก์ชั่น alertUser() จะแสดงกล่องตอบโต้ มีข้อความแสดงว่า "An alert box contains an exclamation mark"
+                <br> <br>บรรทัด 28 : เป็นการสร้างปุ่มชื่อ Click here to test confirm() และเมื่อกดปุ่ม Click here to test confirm() จะเรียกฟังก์ชั่น confirmUser() จะแสดงกล่องตอบโต้ มีข้อความแสดงว่า "please confirm that you want" และ "to test another button?"
+                ถ้ากดปุ่ม Ok จะขึ้นหน้าใหม่แสดงข้อความ "You selected OK" ถ้ากดปุ่ม Cancel จะขึ้นหน้าใหม่แสดงข้อความ "You selected Cancel"
+                <br> <br> บรรทัด 29 : เป็นการสร้างปุ่ม ชื่อ Click here to test prompt() และเมื่อกดปุ่ม Click here to test prompt() จะเรียกฟังก์ชั่น promptUser() จะแสดงกล่องตอบโต้ มีข้อความแสดงว่า "What is your name?" และให้ใส่ชื่อลงไปช่องว่าง ถ้ากดปุ่ม
+                Ok จะขึ้นหน้าใหม่แสดงข้อความ "welcome to this page" ตามด้วยชื่อที่ใส่
+                <br> <br>
+
+                <h4> Js06.html </h4>
+                <br>
+                <img src="Capture.PNG6.PNG" />
+                <br> <br> บรรทัด 8 : ขึ้นบรรทัด และพิมพ์ข้อความ "This browser is" และ "Netscape" (ชื่อ Browser)
+                <br> <br> บรรทัด 9 : ขึ้นบรรทัด และพิมพ์ข้อความ "Version" และเรียกคำสั่ง navigator.appVersion (version ของ netscape)
+                <br> <br> บรรทัด 10 : parseFloat (การแปลงค่า string หรือตัวแปรให้เป็น Number) ตรวจสอบว่า navigator.appVersion มีค่ามากกว่าหรือเท่ากับ 4 หรือไม่
+                <br> <br> บรรทัด 11 : ถ้าเป็นจริง จะขึ้นบรรทัดใหม่ และพิมพ์ข้อความ "You have an up-to-date browser"
+                <br> <br>
+
+                <h4> Js07.html </h4>
+                <br>
+                <img src="Capture.PNG7.PNG" />
+                <br><br>
+
+                <h4> Js08.html </h4>
+                <br>
+                <img src="Capture.PNG8.PNG" />
+                <br><br>
+
+                <h4> Js09.html </h4>
+                <br>
+                <img src="Capture.PNG9.PNG" />
+                <br><br>
+                <h4> Js010.html </h4>
+                <br>
+                <img src="Capture.PNG10.PNG" />
+                <br><br>
+
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid">
+        <p>Footer Text</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>re-direct based upon window size</title>
+</head>
+
+<body>
+    <script language=JavaScript>
+        function windowHeight() {
+            if (document.body && document.body.clientHeight) {
+                return document.body.clientHeight;
+            } else if (window.innerHeight) {
+                return window.innerHeight;
+            } else {
+                return 0;
+            }
+        }
+        if (windowHeight() >= 300) {
+            document.location = "you html or htmp://";
+        } else {
+            document.location = "you html or htmp://";
+        }
+    </SCRIPT>
+</body>
+
+</html>

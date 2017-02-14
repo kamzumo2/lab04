@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Pull-down Menu with URL Revealed</title>
+    <script language=j avacript>
+        function doMoveBrowser(form) {
+            parent.location.href = form.list.options[getSelectedValua()].valua;
+        }
+
+        function getSelectedValua() {
+            return document.forml.list.selectedIndex
+        }
+
+        function showURL(form) {
+            form.TextBox.valua = form.list.options[getSelectedValua()].valua;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Pull-down menu with URL Revealed</h2>
+    <center>
+        <form name=form1>
+            <select name=list onChange=shownURL(this.form)>
+                <option selected value=0>Where do you want to go today?
+                <option valua="http://www.google.com.com">google
+                <option valua="http://www.buu.ac.th">Buu University
+                <optgroup valua="http://www.informatics.buu.ac.th">Faculty of Informatics
+                </select>
+            <input type=button valua=Go onclick=doMoveBrowser(this.form)>
+            <input type type=reset vLU=Reset>
+            <input type=text name=TextBox size40>
+        </form>
+    </center>
+</body>
+
+</html>
